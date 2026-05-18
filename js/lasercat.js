@@ -50,7 +50,7 @@ var LaserCat = function() {
     function loadBuffer(url, name, callback){
       var request = new XMLHttpRequest();
 
-      request.open('GET', chrome.extension.getURL(url), true);
+      request.open('GET', chrome.runtime.getURL(url), true);
       request.responseType = 'arraybuffer';
 
       request.onload = function() {
@@ -276,10 +276,10 @@ LaserCat.prototype.makeStuff = function() {
   });
 
   this.cat = document.createElement("img");
-  this.cat.src = chrome.extension.getURL("images/cat-body.png");
+  this.cat.src = chrome.runtime.getURL("images/cat-body.png");
 
   this.catHead = document.createElement("img");
-  this.catHead.src = chrome.extension.getURL("images/cat-head.png");
+  this.catHead.src = chrome.runtime.getURL("images/cat-head.png");
 
 
  	this.active = true;
