@@ -3,8 +3,8 @@
 
   "name": "LASER CAT",
   "short_name": "LASER CAT",
-  "description": "IT'S A LASER CAT!",
-  "version": "23.0.1",
+  "description": "A fork of LASER CAT extension by Ben Purdy. This version adds the ability to zap (remove) elements from the web page.",
+  "version": "23.0.2",
 
   "background": 
   {
