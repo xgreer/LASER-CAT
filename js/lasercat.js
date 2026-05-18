@@ -429,6 +429,26 @@ LaserCat.prototype.animate = function() {
         ctx.fill();
       }
 
+	// --- REMOVE ELEMENT HIT BY THE LASER ---
+	if (this.shoot) {
+
+		// Temporarily disable canvas pointer events so elementFromPoint
+		// can "see" the real element behind the canvas
+		this.canvas.style.pointerEvents = "none";
+
+		// Get the element under the laser target point
+		const el = document.elementFromPoint(this.target.x, this.target.y);
+
+		// Restore canvas pointer events
+		this.canvas.style.pointerEvents = "auto";
+
+		// Remove the element if it's valid and not the canvas or the root nodes
+		if (el && el !== this.canvas && el !== document.documentElement && el !== document.body) {
+			el.remove();
+		}
+	}
+
+
       var self = this;
       requestAnimationFrame(function() {
       	self.animate();
