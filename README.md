@@ -9,3 +9,5 @@ Fork of [this firefox extension](https://github.com/aUniqueUser/LASER-CAT).
 
 Added:
 - The ability for the cat to actually destroy elements on the webpage
+
+![screenshot of laser cat](/laser-cat-screenshot.png)
